@@ -544,32 +544,32 @@
         
         .contact-detail {
             display: flex;
-            align-items: center;
+            align-items: left;
             margin-bottom: 20px;
         }
         
         .contact-icon {
             width: 50px;
             height: 50px;
-            background-color: rgba(52, 152, 219, 0.1);
+            background-color: rgba(59, 198, 31, 0.1);
             border-radius: 50%;
             display: flex;
-            align-items: center;
+            align-items: left;
             justify-content: center;
             font-size: 1.2rem;
             color: #042602;
-            margin-right: 15px;
+            margin-left: 15px;
         }
         
         .contact-text h4 {
             font-size: 1.1rem;
-            margin-bottom: 5px;
+            margin-left: 5px;
             color: #04411c;
         }
         
         .contact-text p, .contact-text a {
             font-size: 0.95rem;
-            color: #555;
+            color: #1d3505;
         }
         
         .contact-form {
@@ -578,12 +578,12 @@
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-left: 20px;
         }
         
         .form-label {
             display: block;
-            margin-bottom: 5px;
+            margin-left: 5px;
             font-weight: 500;
             color: #10a330;
         }
@@ -692,18 +692,19 @@
         }
         
         /* ===== RESPONSIVE STYLES ===== */
-        @media (max-width: 992px) {
+        @media (max-width: 600px) {
             .section-title {
-                font-size: 2rem;
+                font-size: 1cqmin;
             }
             
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 2cqmin;
             }
             
-            .timeline::before {
+            /*.timeline::before {
                 left: 30px;
             }
+
             
             .timeline-content {
                 width: calc(100% - 60px);
@@ -713,20 +714,43 @@
             .timeline-item::after {
                 left: 30px;
             }
-        }
         
-        @media (max-width: 768px) {
+        }*/
+        .timeline {
+  position: relative;
+  margin: 20px;
+  padding-left: 40px;
+  border-left: 3px solid #333;
+}
+
+.timeline .event {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline .event::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%;
+}
+        
+        @media (max-width: 600px) {
             .mobile-menu {
                 display: block;
             }
             
             .nav-links {
-                position: fixed;
+                position: flex;
                 top: 80px;
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 80px);
-                background-color: #fff;
+                background-color: #013902;
                 flex-direction: column;
                 align-items: center;
                 padding: 40px 0;
@@ -734,7 +758,7 @@
             }
             
             .nav-links.active {
-                left: 0;
+                left: 1;
             }
             
             .nav-links li {
@@ -1235,15 +1259,15 @@
                 <div class="contact-info">
                     <h3>Contact Information</h3>
                     <div class="contact-detail">
-                        <div class="contact-icon">📧</div>
+                        <div class="contact-icon"></div>
                         <div class="contact-text">
                             <h4>Email</h4>
-                            <a href="mailto:john.doe@example.com">john.doe@example.com</a>
+                            <a href="mailto:pranjalis238@gmail.com">pranjalis238@gmail.com</a>
                         </div>
                     </div>
                     
                     <div class="contact-detail">
-                        <div class="contact-icon">📱</div>
+                        <div class="contact-icon"></div>
                         <div class="contact-text">
                             <h4>Phone</h4>
                             <a href="tel:+91 7709427147">7709427147</a>
